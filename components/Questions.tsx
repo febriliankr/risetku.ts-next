@@ -38,7 +38,6 @@ export default function Questions({
     }
 
     if(availableQuestions[questionNumber + 1] == undefined){
-      alert("REDIRECTING")
       localStorage.setItem("uji-hipotesis-finalAnswers", JSON.stringify(answers));
       setAnswers({});
       setQuestionShown(1);
@@ -46,8 +45,6 @@ export default function Questions({
     }
 
     if(questionShown==6 && !availableQuestions[7]){
-      alert("REDIRECTING")
-      
       setAnswers({});
       setQuestionShown(1);
       router.push('/uji-hipotesis/hasil')
