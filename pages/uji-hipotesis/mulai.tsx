@@ -5,7 +5,16 @@ import Question from "../../components/Questions";
 import { useEffect, useState } from "react";
 
 export default function BesarSampelMulai() {
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState({
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
+  });
+  localStorage.setItem("uji-hipotesis-answers", JSON.stringify(answers));
   const [questions, setQuestions] = useState(dataQuestions);
   const [questionShown, setQuestionShown] = useState(1);
   

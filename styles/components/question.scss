@@ -1,9 +1,9 @@
 .options__container {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
   width: fit-content;
   .option {
-
     text-decoration: none;
     font-size: 16px;
     margin-bottom: 12px;
@@ -19,11 +19,9 @@
   .option.active {
     border: 2px solid #06c;
   }
-
-
 }
 
-.q__navigation{
+.q__navigation {
   display: flex;
   justify-content: space-between;
 }

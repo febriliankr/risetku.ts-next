@@ -24,7 +24,6 @@ export default function Questions({
       console.log("setQuestionShown(questionNumber + 3)");
       setQuestionShown(questionNumber + 3);
     } else {
-      alert("FINISHED");
       localStorage.setItem("uji-hipotesis-finalAnswers", JSON.stringify(answers));
       setAnswers({});
       setQuestionShown(1);

@@ -30,8 +30,8 @@ export default function Hasil() {
       if (
         JSON.stringify(dataMatchAll[match].answer) === JSON.stringify(answers)
       ) {
-        setTheAnswerToEverything(JSON.stringify(dataMatchAll[match].uji));
-        setUltimateAnswer(true);
+        setResult(JSON.stringify(dataMatchAll[match].uji));
+        console.log(dataMatchAll[match].uji);
       } else {
         console.log("dataMatchAll[match].uji", dataMatchAll[match].uji);
         // console.log(JSON.stringify(dataMatchAll[match].answer));
