@@ -14,7 +14,7 @@ export default function BesarSampelMulai() {
     6: "",
     7: "",
   });
-  localStorage.setItem("uji-hipotesis-answers", JSON.stringify(answers));
+  
   const [questions, setQuestions] = useState(dataQuestions);
   const [questionShown, setQuestionShown] = useState(1);
   
@@ -33,6 +33,8 @@ export default function BesarSampelMulai() {
     const data = localStorage.getItem("uji-hipotesis-answers");
     if (data) {
       setAnswers(JSON.parse(data));
+    } else {
+      localStorage.setItem("uji-hipotesis-answers", JSON.stringify(answers));
     }
 
     const dataQuestionShown = localStorage.getItem("uji-hipotesis-questionShown");
