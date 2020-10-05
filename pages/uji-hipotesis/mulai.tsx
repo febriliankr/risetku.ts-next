@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { dataQuestions } from "./data";
+import { dataQuestions } from "../../components/data/data";
 import Question from "../../components/Questions";
 import { useEffect, useState } from "react";
 

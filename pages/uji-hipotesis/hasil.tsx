@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { dataMatchAll } from "./data";
+import { dataMatchAll } from "../../components/data/data";
 
 export default function Hasil() {
   const [result, setResult] = useState<string>("Tidak ada uji hipotesis yang sesuai");
