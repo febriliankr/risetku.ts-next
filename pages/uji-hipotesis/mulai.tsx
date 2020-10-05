@@ -18,15 +18,7 @@ export default function BesarSampelMulai() {
   const [questions, setQuestions] = useState(dataQuestions);
   const [questionShown, setQuestionShown] = useState(1);
   
-  const [availableQuestions, setAvailableQuestions] = useState({
-    1: true,
-    2: true,
-    3: true,
-    4: true,
-    5: true,
-    6: true,
-    7: true,
-  });
+  const [availableQuestions, setAvailableQuestions] = useState([true, true, true, true, true, true, true]);
 
   //SET THE HOOKS TO THE LOCAL
   useEffect(() => {
@@ -41,37 +33,25 @@ export default function BesarSampelMulai() {
     if (dataQuestionShown) {
       setQuestionShown(JSON.parse(dataQuestionShown));
     }
+
   }, []);
 
-  
-
-  
-
   useEffect(() => {
+    console.log('answers[2]', answers[2])
     if (answers[2] === "Numerik") {
-      setAvailableQuestions({
-        ...availableQuestions,
-        3: false,
-        4: false,
-      });
-    } else {
-      setAvailableQuestions({
-        ...availableQuestions,
-        3: true,
-        4: true,
-      });
+      availableQuestions[3]=false;
+      availableQuestions[4]=false;
+      console.log("NUMERIK CHOSEN", availableQuestions)
     }
-
+    if (answers[2] === "Kategorik"){
+      availableQuestions[3]=true;
+      availableQuestions[4]=true;
+      console.log("KATEGORIK", availableQuestions)
+    }
     if (answers[6] === "Kategorik") {
-      setAvailableQuestions({
-        ...availableQuestions,
-        7: false,
-      });
+      availableQuestions[7]=false;
     } else {
-      setAvailableQuestions({
-        ...availableQuestions,
-        7: true,
-      });
+      availableQuestions[7]=true;
     }
 
     localStorage.setItem("uji-hipotesis-answers", JSON.stringify(answers));
@@ -84,9 +64,6 @@ export default function BesarSampelMulai() {
     localStorage.setItem("uji-hipotesis-questionShown", JSON.stringify(questionShown));
   }, [questionShown])
 
-
-
-
   return (
     <>
       <Head>
@@ -98,6 +75,7 @@ export default function BesarSampelMulai() {
             <div className={q == questionShown.toString() ? `` : `hidden`}>
               <Question
                 setQuestionShown={setQuestionShown}
+                questionShown={questionShown}
                 answers={answers}
                 questionNumber={questions[q].number}
                 currentQuestion={questions[q].question}

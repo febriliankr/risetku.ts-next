@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export default function Questions({
@@ -8,23 +9,45 @@ export default function Questions({
   questionNumber,
   answers,
   setQuestionShown,
-  availableQuestions
+  availableQuestions,
+  questionShown
 }) {  
+
+
 
   const router = useRouter();
 
+  // useEffect(() => {
+  //   if (availableQuestions[questionNumber]==false){
+  //     nextQuestion();
+  //   } else {
+  //     console.log("SKIPPING")
+  //   }
+  //   // console.log("QNUMBER", availableQuestions)
+  // }, [questionShown])
+
   function nextQuestion() {
-    if (availableQuestions[questionNumber + 1]){
-      console.log("setQuestionShown(questionNumber + 1)");
-      setQuestionShown(questionNumber + 1);
-    } else if (availableQuestions[questionNumber + 2]){
-      console.log("setQuestionShown(questionNumber + 2)");
-      setQuestionShown(questionNumber + 2);
-    } else if (availableQuestions[questionNumber + 3]){
-      console.log("setQuestionShown(questionNumber + 3)");
+    
+    if (availableQuestions[questionNumber+2]==false){
       setQuestionShown(questionNumber + 3);
+      console.log("SKIPPING THREE!")
+    } if (availableQuestions[questionNumber+1]==false){
+      setQuestionShown(questionNumber + 2);
     } else {
+      setQuestionShown(questionNumber + 1);
+    }
+
+    if(availableQuestions[questionNumber + 1] == undefined){
+      alert("REDIRECTING")
       localStorage.setItem("uji-hipotesis-finalAnswers", JSON.stringify(answers));
+      setAnswers({});
+      setQuestionShown(1);
+      router.push('/uji-hipotesis/hasil')
+    }
+
+    if(questionShown==6 && !availableQuestions[7]){
+      alert("REDIRECTING")
+      
       setAnswers({});
       setQuestionShown(1);
       router.push('/uji-hipotesis/hasil')
@@ -32,10 +55,21 @@ export default function Questions({
   }
 
   function prevQuestion() {
-    setQuestionShown(questionNumber - 1);
+
+    if (availableQuestions[questionNumber-2]==false){
+      setQuestionShown(questionNumber - 3);
+      console.log("SKIPPING THREE!")
+    } if (availableQuestions[questionNumber-1]==false){
+      setQuestionShown(questionNumber - 2);
+    } else {
+      setQuestionShown(questionNumber - 1);
+    }
   }
 
-  const handleClick = (e) => {
+  //UDAH BENER ✅
+  const handleClick = (e:any) => {
+    console.log(questionNumber)
+    answers[questionNumber]=e.target.id;
     setAnswers({
       ...answers,
       [questionNumber]: e.target.id,
