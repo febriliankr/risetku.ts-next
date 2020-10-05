@@ -19,9 +19,11 @@ export default function BesarSampel() {
           </p>
 
           <div className="button-small__container">
+            <Link href="/besar-sampel/mulai">
             <a className="button-small" href="">
               Mulai Hitung Besar Sampel
             </a>
+            </Link>
           </div>
         </div>
       </div>

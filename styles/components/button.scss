@@ -44,3 +44,22 @@ a.button-small {
   }
 }
 
+a.next-question{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg{
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &:hover{
+    svg{
+      
+    }
+  }
+}
+
+a.disabled{
+  opacity: 0;
+}

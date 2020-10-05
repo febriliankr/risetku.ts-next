@@ -20,9 +20,9 @@ export default function UjiHipotesis() {
           </p>
 
           <div className="button-small__container">
-            <a className="button-small" href="">
+            <Link href="/uji-hipotesis/mulai"><a className="button-small" href="">
               Mulai Uji Hipotesis
-            </a>
+            </a></Link>
           </div>
 
           <p className="description-subtitle">
