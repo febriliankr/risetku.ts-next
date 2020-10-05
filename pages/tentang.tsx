@@ -6,7 +6,10 @@ import { CgMediaPodcast } from "react-icons/cg";
 export default function tentang() {
   return (
     <div className="about__container">
-      <h1>Tentang 👋</h1>
+      <Head>
+        <title>Tentang | Risetku.com</title>
+      </Head>
+      <Link href="/tentang"><h1>Tentang 👋</h1></Link>
       <p>
         Risetku.com didirikan oleh Elvan Wiyarta (FKUI 2017) dan Febrilian
         Kristiawan (FKUI 2017) dengan tujuan membuat proses analisis penelitian

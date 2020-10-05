@@ -6,6 +6,9 @@ import { CgMediaPodcast } from "react-icons/cg";
 export default function Konsultasi() {
   return (
     <div className="about__container">
+      <Head>
+        <title>Konsultasi | Risetku.com</title>
+      </Head>
       <h1>Konsultasi 🎈</h1>
       <p>
         Risetku menyediakan ruang bagi peneliti yang ingin berkonsultasi dengan

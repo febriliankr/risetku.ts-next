@@ -6,6 +6,9 @@ import { CgMediaPodcast } from "react-icons/cg";
 export default function BesarSampel() {
   return (
     <>
+      <Head>
+        <title>Besar Sampel | Risetku.com</title>
+      </Head>
       <div className="uji-hipotesis__container">
         <div className="text-center">
           <h2 className="emoji-title">🧮</h2>

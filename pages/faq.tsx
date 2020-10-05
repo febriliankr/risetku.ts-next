@@ -8,6 +8,9 @@ import WikiPopup from "../components/WikiPopup";
 export default function FaQ() {
   return (
     <>
+          <Head>
+        <title>FaQ | Risetku.com</title>
+      </Head>
       <div className="uji-hipotesis__container">
         <div className="text-center">
           <h2 className="emoji-title">🙋‍♀️</h2>
