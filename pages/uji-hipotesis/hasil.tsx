@@ -25,23 +25,6 @@ export default function Hasil() {
     });
   }, []);
 
-  function determineUjiHipotesis() {
-    Object.keys(dataMatchAll).map((match) => {
-      if (
-        JSON.stringify(dataMatchAll[match].answer) === JSON.stringify(answers)
-      ) {
-        setResult(JSON.stringify(dataMatchAll[match].uji));
-        console.log(dataMatchAll[match].uji);
-      } else {
-        console.log("dataMatchAll[match].uji", dataMatchAll[match].uji);
-        // console.log(JSON.stringify(dataMatchAll[match].answer));
-        // console.log(JSON.stringify(answers));
-      }
-      return null;
-    });
-
-  }
-
   return (
     <>
       <Head>
