@@ -93,7 +93,7 @@ export default function BesarSampelMulai() {
       <div className="uji-hipotesis__container">
         {Object.keys(questions).map((q) => {
           return (
-            <div className={q == questionShown ? `` : `hidden`}>
+            <div className={q == questionShown.toString() ? `` : `hidden`}>
               <Question
                 setQuestionShown={setQuestionShown}
                 answers={answers}

@@ -40,9 +40,6 @@ export default function Hasil() {
       return null;
     });
 
-    if (outputToPage.length === 0) {
-      outputToPage = "Tidak ditemukan uji hipotesis yang sesuai.";
-    }
   }
 
   return (
