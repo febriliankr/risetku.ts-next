@@ -3,6 +3,7 @@ $dark: #1a364e;
 $pink: rgb(255, 117, 140);
 $paragraph: #455370;
 $paragraph-darkmode: #aacfe2;
+$breakpoint-big: 768px;
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "./components/react-toggle.scss";
 @import "./components/navbar.scss";

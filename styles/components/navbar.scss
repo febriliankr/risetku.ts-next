@@ -39,6 +39,10 @@
     li.active{
       box-shadow: inset 0px -4px 0px 0 #93c2db60;
     }
+
+    @media (max-width: $breakpoint-big) {
+      display: none;
+    }
   }
 }
 

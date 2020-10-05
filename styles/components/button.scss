@@ -14,8 +14,13 @@ a.button {
   &:hover {
     color: $light !important;
     background-color: $pink;
-    
   }
+
+  @media (max-width: $breakpoint-big) {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
 }
 
 a.button-small {
@@ -32,7 +37,10 @@ a.button-small {
   &:hover {
     color: $light !important;
     background-color: $pink;
-    
+  }
+
+  @media (max-width: $breakpoint-big) {
+    padding: 10px 20px;
   }
 }
 

@@ -7,6 +7,12 @@
   margin: 0 auto 0;
   max-width: 800px;
 
+  @media (max-width: $breakpoint-big) {
+    padding: 30px 10px 85px;
+    font-size: 1.125rem;
+    max-width: 90%;
+  }
+
   h1 {
     text-transform: uppercase;
     font-size: 26px;
@@ -18,6 +24,9 @@
     line-height: 27px;
     font-size: 18px;
     margin: 5px 0 5px;
+    @media (max-width: $breakpoint-big) {
+      font-size: 1rem;
+    }
   }
 
   ul {
@@ -44,6 +53,9 @@
   a {
     font-size: 18px;
     font-weight: 500;
+    @media (max-width: $breakpoint-big) {
+      font-size: 1rem;
+    }
   }
 
   .button-small__container {
