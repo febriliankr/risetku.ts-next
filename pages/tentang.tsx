@@ -2,13 +2,19 @@ import Head from "next/head";
 import Link from "next/link";
 import { FaSpotify } from "react-icons/fa";
 import { CgMediaPodcast } from "react-icons/cg";
+import { useRouter } from "next/router";
 
 export default function tentang() {
+
+  const router = useRouter()
+  console.log(router.route);
+
   return (
     <div className="about__container">
-      <Head>
-        <title>Tentang | Risetku.com</title>
-      </Head>
+      {
+        router.route === '/' ? null : (<Head><title>Tentang | Risetku.com</title></Head>)
+      }
+      
       <Link href="/tentang"><h1>Tentang 👋</h1></Link>
       <p>
         Risetku.com didirikan oleh Elvan Wiyarta (FKUI 2017) dan Febrilian
