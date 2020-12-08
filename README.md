@@ -23,3 +23,7 @@ The short answer is will take a markdown format. It uses react-markdown to gener
 
 ### New Navbar Indicator
 Added active navbar indicator according to current page. Using the variable is currentLocation, named after LANY's song, listen [here](https://www.youtube.com/watch?v=_PUTnwz3YSU).
+
+## Progress
+
+added nprogress https://levelup.gitconnected.com/improve-ux-of-your-next-js-app-in-3-minutes-with-page-loading-indicator-3a422113304d
